@@ -1,0 +1,8 @@
+#foodName, #daysSinceEaten{
+    display: inline;
+}
+
+.food{
+    border: 1px solid gray;
+    /* box-shadow: gray; */
+}
