@@ -6,7 +6,6 @@ import FoodList from './FoodList';
 function App() {
   const [foodName, setFoodName] = useState('');
   const [days, setDays] = useState(0);
-  // const [newFoodName, setNewFoodName] = useState('');
   const [foodList, setFoodList] = useState([]);
 
 
@@ -18,10 +17,8 @@ function App() {
     try{
       await Axios.get('http://localhost:3001/')
         .then(response => {
-          // console.log(response.data);
           setFoodList(response.data);
         })
-        // console.log("useEffect occured")
     } catch (err) {
         console.log(err);
     }
@@ -32,9 +29,6 @@ function App() {
         foodName: foodName,
         daysSinceEaten: days,
     })
-    // .then(response => {
-    //   setFoodList(response.data);
-    // })
   }
 
   return (

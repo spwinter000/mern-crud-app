@@ -40,8 +40,6 @@ app.put("/update", async (req, res) => {
     const newFoodName = req.body.newFoodName;
     const id = req.body.id;
     
-    // const food = new FoodModel({foodName: foodName, daysSinceEaten: days});
-
     try{
         await FoodModel.findById(id, (err, updatedFood) => {
             updatedFood.foodName = newFoodName;
